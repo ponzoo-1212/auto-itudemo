@@ -6,7 +6,7 @@ from pathlib import Path
 
 KANJI_NUM = re.compile(r"[一二三四五六七八九〇零十百千]|(?<![0-9])万")
 # 数を表さない慣用表現は許可（一緒・一番など）
-ALLOW = re.compile(r"一緒|一番|一瞬|一気|一生|一切|一言|一方|一部|一覧|一人称|一斉|一杯|十分|万一|一応|一旦|一体|一種|一面|四角|四季|三角|二度寝|三日月|二重")
+ALLOW = re.compile(r"一緒|一番|一瞬|一気|一生|一切|一言|一方|一部|一覧|一人称|一斉|一杯|十分|万一|一応|一旦|一体|一種|一面|四角|四季|三角|二度寝|三日月|二重|統一|一文|同一")
 AMPM = re.compile(r"午前|午後")
 
 targets = sys.argv[1:] or [str(p) for p in sorted(Path("works").glob("*/*.md"))]
